@@ -1,1 +1,0 @@
-# An simple Adaptation of elbuit/sklylander to get skylander's KeyA.
