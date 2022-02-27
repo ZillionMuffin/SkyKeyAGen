@@ -15,7 +15,7 @@ cls
 type logo
 set /p uid="~~> Write your tag's UID: "
 if [%uid%]==[] goto CheckUID
-if "%uid:~8,1%"=="" (goto CheckUID)
+if "%uid:~7,1%"=="" (goto CheckUID)
 goto MainGetKeys
 
 :MainGetKeys
