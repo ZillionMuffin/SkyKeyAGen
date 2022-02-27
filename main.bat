@@ -15,13 +15,16 @@ cls
 type logo
 set /p uid="~~> Write your tag's UID: "
 if [%uid%]==[] goto CheckUID
-if "%uid:~8,1%"=="" (goto CheckUID)
+if "%uid:~7,1%"=="" (goto CheckUID)
 goto MainGetKeys
 
 :MainGetKeys
 echo.
+python sklykeys.py -u %uid% > %name%.%uid%.keys
+cls
+echo .
+type logo
 python sklykeys.py -u %uid%
-python sklykeys.py -u %uid% > %name%.%uid%.keys >nul 2>&1
 echo.
 pause
 exit
